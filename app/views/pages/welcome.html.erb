@@ -1,0 +1,12 @@
+<!-- app/views/pages/welcome.html.erb -->
+
+<div class="weather-container">
+  <h2>Current Weather in Tokyo</h2>
+  <% if @weather.present? %>
+    <i class="weather-icon <%= @weather['current']['condition']['icon'] %>"></i>
+    <p><%= @weather['current']['temp_c'] %>°C</p>
+    <p><%= @weather['current']['condition']['text'] %></p>
+  <% else %>
+    <p>Weather data not available.</p>
+  <% end %>
+</div>
