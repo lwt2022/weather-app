@@ -13,3 +13,71 @@
  *= require_tree .
  *= require_self
  */
+
+/* app/assets/stylesheets/application.css */
+
+/* app/assets/stylesheets/application.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Global styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('/assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.weather-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.weather-card__header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.weather-card__location {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.weather-card__temperature {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.weather-card__condition {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.weather-card__details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-card__detail-item {
+  flex: 1;
+  text-align: center;
+}
+
+.label {
+  font-weight: 700;
+}
+
+/* Add additional styling for shapes and icons as needed */
+
