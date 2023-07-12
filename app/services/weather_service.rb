@@ -1,28 +1,29 @@
 require 'httparty'
 
 class Weather
-  attr_reader :location, :temperature, :condition, :humidity, :wind_speed, :icon
+  attr_reader :location, :temperature, :condition, :humidity, :wind_speed, :icon, :forecast
 
-  def initialize(location:, temperature:, condition:, humidity:, wind_speed:, icon:)
+  def initialize(location:, temperature:, condition:, humidity:, wind_speed:, icon:, forecast:)
     @location = location
     @temperature = temperature
     @condition = condition
     @humidity = humidity
     @wind_speed = wind_speed
     @icon = icon
+    @forecast = forecast
   end
 end
-
 
 class WeatherService
   API_KEY = 'c81613f997c84764b82124832230807'
 
   def self.current_weather(location)
-    url = "http://api.weatherapi.com/v1/current.json?key=#{API_KEY}&q=#{location}&aqi=no"
+    url = "http://api.weatherapi.com/v1/forecast.json?key=#{API_KEY}&q=#{location}&days=3&aqi=no"
     response = HTTParty.get(url)
     weather_data = JSON.parse(response.body)
 
     condition_icon = map_condition_to_icon(weather_data['current']['condition']['code'])
+    forecast_data = weather_data['forecast']['forecastday']
 
     Weather.new(
       location: location,
@@ -30,7 +31,8 @@ class WeatherService
       condition: weather_data['current']['condition']['text'],
       humidity: weather_data['current']['humidity'],
       wind_speed: weather_data['current']['wind_kph'],
-      icon: condition_icon
+      icon: condition_icon,
+      forecast: forecast_data
     )
   end
 
