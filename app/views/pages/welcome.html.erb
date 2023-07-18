@@ -1,0 +1,22 @@
+<!-- app/views/pages/welcome.html.erb -->
+
+<div class="container">
+  <div class="weather-card">
+    <div class="weather-card__header">
+      <h2 class="weather-card__location"><%= @weather.location %></h2>
+      <h1 class="weather-card__temperature"><%= @weather.temperature %>°C</h1>
+      <p class="weather-card__condition"><%= @weather.condition %></p>
+    </div>
+    <div class="weather-card__details">
+      <div class="weather-card__detail-item">
+        <span class="label">Humidity:</span>
+        <span><%= @weather.humidity %>%</span>
+      </div>
+      <div class="weather-card__detail-item">
+        <span class="label">Wind Speed:</span>
+        <span><%= @weather.wind_speed %> km/h</span>
+      </div>
+      <!-- Add more weather details here as needed -->
+    </div>
+  </div>
+</div>

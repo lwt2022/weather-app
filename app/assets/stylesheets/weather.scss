@@ -1,0 +1,53 @@
+// Place all the styles related to the Weather controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+/* app/assets/stylesheets/weather.css */
+
+/* Set background color */
+body {
+  background-color: #f2f2f2;
+}
+
+/* Style the weather display */
+.weather-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.weather-container h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.weather-container p {
+  font-size: 18px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.weather-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+  .weather-container {
+    padding: 10px;
+  }
+
+  .weather-container h2 {
+    font-size: 20px;
+  }
+
+  .weather-container p {
+    font-size: 16px;
+  }
+
+  .weather-icon {
+    font-size: 36px;
+  }
+}

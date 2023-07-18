@@ -1,0 +1,25 @@
+.
+├── Gemfile
+├── Gemfile.lock
+├── README.md
+├── Rakefile
+├── app
+├── babel.config.js
+├── bin
+├── config
+├── config.ru
+├── db
+├── file_structure.txt
+├── lib
+├── log
+├── node_modules
+├── package.json
+├── postcss.config.js
+├── public
+├── storage
+├── test
+├── tmp
+├── vendor
+└── yarn.lock
+
+13 directories, 10 files
